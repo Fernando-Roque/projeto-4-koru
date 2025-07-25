@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/desafioIntegrador.css">
+  <title>Loja Online</title>
+</head>
+<body>
+  <header>
+    <h1>PÁGINA DE RELATÓRIOS</h1>
+    
+     <div class="search-container">
+      <input class="pesquisa" type="text" placeholder="Pesquisar Produto">
+      <button class="btn" data-action="buscar">
+      <img src="../img/lupa.svg" alt="Lupa" width="30px">
+    </button>
+  </div>
+
+  </header>
+
+  <!-- Área sensível ao hover -->
+  <div class="sidebar-trigger"></div>
+
+  <!-- Painel lateral com os botões em coluna -->
+  <div class="sidebar">
+    <button class="btn" data-action="formatado">Produtos Formatados</button>
+    <button class="btn" data-action="estoque">Estoque > 0</button>
+    <button class="btn" data-action="eletronicos">Eletrônicos < R$ 1.000,00</button>
+    <button class="btn" data-action="semEstoque">Sem Estoque</button>
+    <button class="btn" data-action="avaliacoes">Avaliações</button>
+    <button class="btn" data-action="cafeteira">Cafeteira</button>
+    <button class="btn" data-action="vestuario">Categoria Vestuário</button>    
+    <button class="btn" data-action="media">Média de Avaliações</button>
+    <button class="btn" data-action="melhor">Melhor Avaliado</button>
+</div>
+
+  <main>
+    <div class="container">
+      <div class="result">
+        aqui vai o resultado...
+      </div>
+    </div>
+  </main>  
+  
+  <script src="../js/dados.js"></script>
+  <script type="module"  src="../js/desafioIntegrador.js"></script>
+</body>
+</html>

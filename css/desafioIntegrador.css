@@ -1,0 +1,165 @@
+body {
+  background-color: rgb(202, 230, 191);
+}
+
+header{
+    text-align: center;    
+    font-weight: bold; 
+    padding: 20px;   
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* espaço entre input e botão */
+  margin-top: 20px;
+}
+
+input {
+  width: 350px;
+  height: 25px;
+  text-align: start;
+  padding-left: 0.8rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border:none;
+  border-bottom: 2px solid black;
+}
+
+button.btn {
+  height: 30px;
+  padding: 0 10px;
+  background-color: #27ae60;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.btn img {
+  vertical-align: middle;
+}
+
+
+/* Área sensível para hover no desktop */
+.sidebar-trigger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 100vh;
+  z-index: 1000;
+  display: none; /* Oculta em mobile */
+}
+
+/* Barra lateral padrão (oculta no desktop) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -200px;
+  width: 200px;
+  height: 100vh;
+  background-color: #2c3e50;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 10px;
+  transition: left 0.3s ease;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+/* Botões dentro da sidebar */
+.sidebar .btn {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 15px;
+  height: 100px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar .btn:hover {
+  background-color: #219150;
+}
+
+/* Container ocupa a tela inteira e centraliza o conteúdo */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh; /* ocupa a altura total da tela */
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Estilo da área de resultado */
+.result {
+  font-size: 20px;
+  color: #333;
+  display: flex;
+  padding: 100px;
+  gap: 50px;
+  margin: 0 50px auto;
+  flex-wrap: wrap;
+  
+}
+
+.card {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin: 12px 0;
+  background-color: #f9f9f9;
+  max-width: 300px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: start;
+}
+
+.card p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.card strong {
+  color: #333;
+}
+
+
+/* Mostrar sidebar no hover — somente no desktop */
+@media (min-width: 768px) {
+  .sidebar-trigger {
+    display: block;
+  }
+
+  .sidebar-trigger:hover + .sidebar,
+  .sidebar:hover {
+    left: 0;
+  }
+}
+
+/* Estilo responsivo para mobile (sidebar sempre visível em coluna) */
+@media (max-width: 767px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+    padding: 10px;
+    background-color: transparent;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar .btn {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 10px;
+  }
+}
