@@ -59,7 +59,7 @@ const nomesCategorias = products.map(function (produto) {
   return produto.name + " - " + produto.category;
 });
 
-console.log("D.1 Nome do produto - Categoria:");
+console.log("D.a Nome do produto - Categoria:");
 console.log(nomesCategorias);
 
 // b- Use map para criar um array com os preços de todos os produtos com impostos (15% a mais)
@@ -68,7 +68,7 @@ const precosComImposto = products.map(function (produto) {
   return (produto.price * 1.15).toFixed(2); // toFixed para duas casas decimais
 });
 
-console.log("D.2 Preços com 15% de imposto:");
+console.log("D.b Preços com 15% de imposto:");
 console.log(precosComImposto);
 
 // c. Combine forEach com um acumulador externo para calcular o valor total de todos os produtos
@@ -80,4 +80,4 @@ products.forEach(function (produto) {
   total += produto.price; // vai somando os preços
 });
 
-console.log("D.3 Valor total dos produtos: R$" + total.toFixed(2));
+console.log("D.c Valor total dos produtos: R$" + total.toFixed(2));
